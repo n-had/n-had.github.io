@@ -37,11 +37,21 @@ themeToggle.addEventListener("click", () => {
 });
 
 const blob = document.querySelector(".blob");
+const blobSize = 200;
 window.addEventListener("pointermove", (e) => {
   const { clientX, clientY } = e;
-  console.log(clientX, clientY);
+  // console.log(clientX, clientY);
+
+  // calculate the maximum X and Y positions to prevent overflow
+  const maxX = window.innerWidth - blobSize;
+  const maxY = window.innerHeight - blobSize;
+
+  // constrain the blob's position
+  const constrainedX = Math.min(Math.max(clientX, 0), maxX);
+  const constrainedY = Math.min(Math.max(clientY, 0), maxY);
+
   blob.animate(
-    { left: `${clientX}px`, top: `${clientY}px` },
+    { left: `${constrainedX}px`, top: `${constrainedY}px` },
     { duration: 3000, fill: "forwards" }
   );
 });
