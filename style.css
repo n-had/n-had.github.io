@@ -217,6 +217,46 @@ a:visited {
   transition: 50ms ease-in-out;
   transform: scale(0.8);
 }
+.reveal-top {
+  animation: revealTop 1s forwards;
+}
+@keyframes revealTop {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.reveal-bottom {
+  animation: revealBottom 1s forwards;
+}
+@keyframes revealBottom {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.reveal-fade-in {
+  animation: revealFadeIn 1s forwards;
+}
+@keyframes revealFadeIn {
+  0% {
+    opacity: 0;
+    clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+  }
+  100% {
+    opacity: 1;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
 
 /* Styles for screens wider than 600px */
 @media screen and (min-width: 600px) {
