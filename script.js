@@ -18,8 +18,8 @@ function detectAndSetSystemTheme() {
 
 detectAndSetSystemTheme();
 
-const copyEmailButton = document.getElementById("btn-copy-email");
-copyEmailButton.addEventListener("click", () => {
+const buttonCopyEmail = document.getElementById("btn-copy-email");
+buttonCopyEmail.addEventListener("click", () => {
   navigator.clipboard
     .writeText("nihad.mail@proton.me")
     .then(() => {
@@ -54,4 +54,9 @@ window.addEventListener("pointermove", (e) => {
     { left: `${constrainedX}px`, top: `${constrainedY}px` },
     { duration: 3000, fill: "forwards" }
   );
+});
+
+const buttonToDetails = document.querySelector(".btn-to-details");
+buttonToDetails.addEventListener("click", () => {
+  document.getElementById("details-section-wrapper").scrollIntoView({ behavior: "smooth" });
 });
