@@ -67,10 +67,12 @@ a:visited {
   top: 45%;
   translate: -50% -50%;
   background: linear-gradient(
-    to right,
-    rgb(255, 51, 51),
-    rgb(189, 114, 255),
-    rgb(94, 94, 255)
+    rgb(255, 255, 49),
+    rgb(255, 186, 58),
+    rgb(255, 58, 58),
+    rgb(195, 57, 255),
+    rgb(132, 79, 255),
+    rgb(63, 124, 255)
   );
   animation: rotate 4s ease-in-out infinite;
   opacity: 0.9;
@@ -94,7 +96,7 @@ a:visited {
   height: 100vh;
   width: 100%;
   z-index: 2;
-  backdrop-filter: blur(100px);
+  backdrop-filter: blur(98px);
   /* overflow: hidden; */
   overflow-y: scroll;
 }
@@ -253,7 +255,7 @@ a:visited {
 .projects-grid__item__body {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 1rem;
 }
 .projects-grid__item__head {
   font-weight: 700;
@@ -262,6 +264,16 @@ a:visited {
 /* .projects-grid__item__text {
 
 } */
+.projects-grid__item__repo-link {
+  text-decoration: none;
+  width: fit-content;
+  display: flex;
+  gap: 0.25rem;
+  align-items: center;
+  padding: 0.5rem 0.75rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+}
 
 .footer {
   display: flex;
