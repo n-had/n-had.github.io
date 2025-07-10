@@ -18,6 +18,11 @@ function detectAndSetSystemTheme() {
 
 detectAndSetSystemTheme();
 
+window.onload = function () {
+  const wrapper = document.querySelector(".wrapper");
+  wrapper.focus(); // Set focus to the wrapper div
+};
+
 const buttonCopyEmail = document.getElementById("btn-copy-email");
 buttonCopyEmail.addEventListener("click", () => {
   navigator.clipboard
@@ -58,5 +63,7 @@ window.addEventListener("pointermove", (e) => {
 
 const buttonToDetails = document.querySelector(".btn-to-details");
 buttonToDetails.addEventListener("click", () => {
-  document.getElementById("details-section-wrapper").scrollIntoView({ behavior: "smooth" });
+  document
+    .getElementById("details-section-wrapper")
+    .scrollIntoView({ behavior: "smooth" });
 });
