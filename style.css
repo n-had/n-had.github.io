@@ -35,26 +35,7 @@
 
 html {
   scroll-behavior: smooth;
-  /* scrollbar-width: thin; */
-  /* scrollbar-color: var(--scroll-bar-thumb) var(--scroll-bar-track); */
 }
-
-::-webkit-scrollbar {
-  width: 10px;
-  height: 10px;
-}
-::-webkit-scrollbar-thumb {
-  background: var(--scroll-bar-thumb);
-  /* border-radius: 10px; */
-}
-::-webkit-scrollbar-track {
-  background: var(--scroll-bar-track);
-  /* border-radius: 10px; */
-}
-::-webkit-scrollbar-thumb:hover {
-  background: var(--scroll-bar-thumb-hover);
-}
-
 body {
   background-color: var(--bg);
   color: var(--fg);
@@ -375,6 +356,25 @@ a:visited {
 
 /* Styles for screens wider than 600px */
 @media screen and (min-width: 600px) {
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--scroll-bar-thumb);
+    /* border-radius: 10px; */
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--scroll-bar-track);
+    /* border-radius: 10px; */
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--scroll-bar-thumb-hover);
+  }
+  /* body {
+    scrollbar-width: thin;
+    scrollbar-color: var(--scroll-bar-thumb) var(--scroll-bar-track);
+  } */
   .title {
     font-size: 6rem;
   }
