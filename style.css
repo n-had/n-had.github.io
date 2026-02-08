@@ -148,6 +148,10 @@ a:visited {
   align-items: center;
   border: 1px solid var(--border);
   border-radius: var(--radius);
+  transition: border-color 300ms ease;
+}
+.links__github:hover {
+  border-color: var(--fg);
 }
 .links__github__a {
   color: var(--fg);
@@ -174,6 +178,10 @@ a:visited {
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 0.5rem 0.75rem;
+  transition: border-color 300ms ease;
+}
+.links__email:hover {
+  border-color: var(--fg);
 }
 .links__email__a {
   display: flex;
@@ -283,6 +291,10 @@ a:visited {
   border-radius: var(--radius);
   border: 1px solid var(--border);
   font-size: 1rem;
+  transition: border-color 300ms ease;
+}
+.projects-grid__item__repo-link:hover {
+  border-color: var(--fg);
 }
 
 .footer {
